@@ -14,7 +14,9 @@
 			var limit = this.options.limit;
 			var showCaptions = this.options.showCaptions;
 			var interval = this.options.interval;
-      var delay = this.options.delay;
+      		var delay = this.options.delay;
+      		var transition = this.options.transition;
+      		var element = this.options.element;
 
 			var feed = new Instafeed({
 				get: 'tagged',
@@ -45,23 +47,23 @@
 						captions.push("<a href='" + link + "'>@" + username + "</a> " + text);
 					}
 
-				  $.vegas('slideshow', {
-            delay: delay,
-				  	backgrounds: backgrounds,
-					walk: function(step) {
-						if (showCaptions) {
-							var html = "<div class='caption'>" + captions[step] + "</div>";	
-							$('#message').html(html);
-						}
-					}
-				  });
-				  $.vegas('overlay', {
-					src:'js/vendor/vegas/overlays/01.png'
-				  });
+					var slideshow = $(element).vegas({
+           				delay: delay,
+				  		slides: backgrounds,
+				  		overlay: 'js/vendor/vegas/dist/overlays/01.png',
+						walk: function(step) {
+							if (showCaptions) {
+								$('#message').html($('<div>')
+														.addClass('caption')
+														.html(captions[step]));
+							}
+						},
+						transition: transition
+				  	});
 
-				  if (limit === '1' || limit === 1) {
-					$.vegas('pause');
-				  }
+				  	if (limit == 1) {
+						slideshow.vegas('pause');
+				  	}
 				},
 			});
 
