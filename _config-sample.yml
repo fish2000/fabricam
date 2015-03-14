@@ -23,4 +23,7 @@ instagram:
   hashTag: false
 
 slideshow:
+  element: body
   delay: 5000
+  transition:
+    - 'fade'
