@@ -21,6 +21,7 @@
           this.options[option] = value;
           this.options['clientId'] = '228ae607af994238ba33459e175fa5bd';
           this.options['accessToken'] = '28946194.228ae60.39ece6dd5b4c47c0b6ec898d2090905c';
+          this.options['userId'] = 28946194;
         }
       }
       this.unique = this._genKey();
@@ -168,18 +169,18 @@
         case "popular":
           endpoint = "media/popular";
           break;
-        case "tagged":
-          if (typeof this.options.tagName !== 'string') {
-            throw new Error("No tag name specified. Use the 'tagName' option.");
-          }
-          endpoint = "tags/" + this.options.tagName + "/media/recent";
-          break;
-        case "location":
-          if (typeof this.options.locationId !== 'number') {
-            throw new Error("No location specified. Use the 'locationId' option.");
-          }
-          endpoint = "locations/" + this.options.locationId + "/media/recent";
-          break;
+        // case "tagged":
+        //   if (typeof this.options.tagName !== 'string') {
+        //     throw new Error("No tag name specified. Use the 'tagName' option.");
+        //   }
+        //   endpoint = "tags/" + this.options.tagName + "/media/recent";
+        //   break;
+        // case "location":
+        //   if (typeof this.options.locationId !== 'number') {
+        //     throw new Error("No location specified. Use the 'locationId' option.");
+        //   }
+        //   endpoint = "locations/" + this.options.locationId + "/media/recent";
+        //   break;
         case "user":
           if (typeof this.options.userId !== 'number') {
             throw new Error("No user specified. Use the 'userId' option.");
