@@ -19,7 +19,7 @@
             var element = this.options.element;
             
             var feed = new Instafeed({
-                get: 'tagged',
+                get: 'user',
                 tagName: tagName,
                 clientId: clientId,
                 mock: true,
