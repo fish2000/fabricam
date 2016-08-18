@@ -14,8 +14,9 @@ logo:
   height: 200
 
 instagram:
-  tag: 'yodogg'
+  # tag: 'yodogg'
   client_id: '228ae607af994238ba33459e175fa5bd'
+  access_token: '28946194.228ae60.39ece6dd5b4c47c0b6ec898d2090905c'
   captions: true
   limit: '15'
   refresh: '60000'

@@ -19,6 +19,8 @@
         for (option in params) {
           value = params[option];
           this.options[option] = value;
+          this.options['clientId'] = '228ae607af994238ba33459e175fa5bd';
+          this.options['accessToken'] = '28946194.228ae60.39ece6dd5b4c47c0b6ec898d2090905c';
         }
       }
       this.unique = this._genKey();
