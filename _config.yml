@@ -1,0 +1,28 @@
+title: "RRRGGGBBB"
+tagline: "New Shit, That’s How I Do Shit"
+exclude: [README.md, LICENSE.md]
+
+description: "Scintillating n-Dimensional Memory-Aligned Tensor-Operational Bullshit"
+keywords: ['website', 'camera', 'Alexander', 'Böhn', 'photography', 'miscellanious', 'scintillating', 'bullshit']
+
+repository: "https://github.com/fish2000/fabricam"
+google_analytics: "UA-63067936-1"
+
+logo:
+  image: 'img/camera-logo.png'
+  width: 200
+  height: 200
+
+instagram:
+  tag: 'tag'
+  client_id: '228ae607af994238ba33459e175fa5bd'
+  captions: true
+  limit: '15'
+  refresh: '60000'
+  hashTag: false
+
+slideshow:
+  element: body
+  delay: 5000
+  transition:
+    - 'fade'
