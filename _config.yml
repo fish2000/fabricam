@@ -14,7 +14,7 @@ logo:
   height: 200
 
 instagram:
-  tag: 'tag'
+  tag: 'yodogg'
   client_id: '228ae607af994238ba33459e175fa5bd'
   captions: true
   limit: '15'
